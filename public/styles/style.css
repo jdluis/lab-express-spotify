@@ -1,0 +1,121 @@
+/* GENERALS */
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+/* HOME */
+#home-container {
+    display: grid;
+    place-content: center;
+    height: 100%;
+
+    background-image: url("../images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#form-container {
+    padding: 50px 200px;
+    /* width: 400px; */
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.194);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+#form-container input {
+    background-color: white;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.171);
+    width: 180%;
+    padding: 5px;
+}
+
+
+#form-container button {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-weight: 700;
+}
+
+
+#form-container button:hover {
+   opacity: 0.8;
+   cursor: pointer;
+}
+
+/*SEARCH ARTIST VIEW */
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 40px;
+}
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.artist-card .img-container {
+    height: 300px;
+}
+
+.artist-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artist-card .text-container {
+    background-color: rgb(100, 87, 79);
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.artist-card .text-container a {
+   padding:  4px 10px;
+   background-color: red;
+   border-radius: 10px;
+   color: white;
+}
+
+.back-container {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    background-color: black;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.back-container a {
+    color: white;
+}
+
+.back-container:hover {
+    opacity: .8;
+}

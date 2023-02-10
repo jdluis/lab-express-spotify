@@ -1,0 +1,16 @@
+<div class="back-container">
+  <a href="/">Back</a>
+</div>
+<div class="cards-container">
+  {{#each this.artists}}
+    <div class="artist-card">
+      <div class="img-container">
+        <img src="{{this.images.0.url}}" alt="{{this.name}}" />
+      </div>
+      <div class="text-container">
+        <h2>{{this.name}}</h2>
+        <a href="/">View Albums</a>
+      </div>
+    </div>
+  {{/each}}
+</div>
