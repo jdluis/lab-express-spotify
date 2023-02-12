@@ -1,0 +1,12 @@
+<div>
+  <h1 class="h1Test">Albums for: {{this.albumns.0.artists.0.name}}</h1>
+</div>
+
+  <div class="cards-container">
+    {{#each this.albumns}}
+        {{> cardspartial buttonName = "Tracks"}}
+    {{/each}}
+  </div>
+
+
+
