@@ -1,18 +1,45 @@
 <div>
-  <h1>TRacks</h1>
-
-  <table>
-    <thead>
+  <table class="table-tracks">
+    <thead class="table-head">
       <tr>
-        <th>Title</th>
+        <th class="title">Title</th>
         <th>Listen</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="table-body">
       {{#each tracks}}
         <tr>
-          <td>{{this.name}}</td>
-          <td><audio controls src="{{this.preview_url}}"></audio></td>
+          <td class="track-name">{{this.name}}</td>
+          <td class="track-audio">
+            {{!  <div id="audio-player-container">
+                <button class="btn-audio-player" id="play-btn"><img
+                    class="icon"
+                    src="/icons/play.svg"
+                    alt=""
+                  /></button>
+                <p id="timeView">0:00 / 0:30</p>
+                <input type="range" id="current-time" />
+                <button id="muteBtn" class="btn-audio-player"><img
+                    class="icon"
+                    src="/icons/volume-high.svg"
+                    alt=""
+                  /></button>
+                <input type="range" id="volumeInput" />
+                <button class="btn-audio-player" id="dowload-song"><img
+                    class="icon"
+                    src="/icons/download.svg"
+                    alt=""
+                  /></button>
+            </div> }}
+
+            {{! Temporaly }}
+            <audio
+              controls
+              id="track{{this.track_number}}"
+              src="{{this.preview_url}}"
+            ></audio>
+
+          </td>
         </tr>
       {{/each}}
     </tbody>
