@@ -2,11 +2,18 @@
   <h1 class="h1Test">Albums for: {{this.albumns.0.artists.0.name}}</h1>
 </div>
 
-  <div class="cards-container">
-    {{#each this.albumns}}
-        {{> cardspartial buttonName = "Tracks"}}
-    {{/each}}
-  </div>
+<div class="cards-container">
+  {{#each this.albumns}}
+    {{!--  {{> cardspartial buttonName = "Tracks"}} --}}
 
-
-
+    <div class="artist-card">
+      <div class="img-container">
+        <img src="{{this.images.0.url}}" alt="{{this.name}}" />
+      </div>
+      <div class="text-container">
+        <h2>{{this.name}}</h2>
+        <a href="/albums/tracks/{{this.id}}">View Tracks</a>
+      </div>
+    </div>
+  {{/each}}
+</div>

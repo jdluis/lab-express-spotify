@@ -60,14 +60,12 @@ app.get("/albums/:artistId", (req, res, next) => {
     );
 });
 
-app.get("./albums/tracks/:albumId", (req, res, next) => {
-  console.log("----------------------------------");
-  console.log(req.params.albumId);
-/*   res.render("tracks.hbs"); */
+app.get("/albums/tracks/:albumId", (req, res, next) => {
   spotifyApi
     .getAlbumTracks(req.params.albumId)
     .then((data) => {
-      console.log(data.body);
+      console.log("----------------------------------");
+      console.log( data.body);
       res.render("tracks.hbs", {
         tracks: data.body.items,
       });
